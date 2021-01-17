@@ -372,9 +372,13 @@
                     window.location.assign(endpoint + "/?post_id=" + post_id + '&action=download');
                 }
             };
-            const parts = url_field.value.split('/').filter(function (p) {
-                return (p.trim() !== '')
-            });
+            const parts = url_field.value.trim().toLowerCase()
+                .replace('?', '/')
+                .replace('&', '/')
+                .split('/')
+                .filter(function (p) {
+                    return (p.trim() !== '')
+                });
             const post_id = parts[parts.indexOf('newsfeed') + 1];
             xhttp.open("GET", endpoint + '/?post_id=' + post_id + '&action=validate');
             xhttp.send();
