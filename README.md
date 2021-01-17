@@ -1,4 +1,4 @@
-# minds-archiver
+# Minds - Video Archiver
 
 Frontend for https://thomdin.github.io/minds-archiver/
 
