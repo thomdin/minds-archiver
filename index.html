@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+            color: inherit;
+            margin: 0;
+            padding: 0;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url('fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url('fonts/Roboto/Roboto-Black.ttf') format('truetype');
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #43434d;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            font-size: 20px;
+            line-height: 1.2;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 80px 0;
+            max-width: 570px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            padding: 0 15px;
+            margin: 0 auto;
+        }
+
+        input[type="text"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #d3dbe3;
+            border-radius: 2px;
+            color: #43434d;
+            height: 46px;
+        }
+
+        form {
+            background-color: #fcfcfc;
+            box-shadow: -1px 0 8px rgba(50, 50, 0, .5);
+            padding: 50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        label {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .github {
+            display: flex;
+            align-items: center;
+            margin: 30px 0;
+        }
+
+        .github svg {
+            margin-right: 15px;
+        }
+
+        form button {
+            position: absolute;
+            display: block;
+            right: 0;
+            top: 0;
+            text-align: center;
+            height: 46px;
+            width: 85px;
+            border: 0;
+            appearance: none;
+            box-shadow: none;
+            cursor: pointer;
+            background: #FFF;
+            transition: 300ms ease-in-out;
+            border: 1px solid #d3dbe3;
+            border-radius: 2px;
+            z-index: 3;
+        }
+
+
+        form button:hover,
+        form button:focus {
+            background-color: #eee;
+        }
+
+        .input-holder {
+            position: relative;
+            padding-right: 85px;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        h1::after {
+            content: ' ';
+            display: block;
+            background-color: #fed12f;
+            height: 6px;
+            width: 206px;
+        }
+
+        main::before {
+            content: ' ';
+            display: block;
+            transform: rotate(-45deg) translate(60%, 50%);
+            background: #fed12f;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100%;
+        }
+
+        main::after {
+            content: ' ';
+            display: block;
+            transform: rotate(-26deg) translate(60%, 50%) translate(200px, 200px);
+            background: #FFF;
+            height: 100%;
+            z-index: -1;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100%;
+            margin-left: -390px;
+            z-index: 1;
+        }
+
+        body::after {
+            content: ' ';
+            display: block;
+            width: 400px;
+            height: 200px;
+            background: #fed12f;
+            position: absolute;
+            left: -140px;
+            bottom: 10px;
+            transform: rotate(45deg);
+        }
+
+        footer {
+            text-align: center;
+            background-color: #FFF;
+            padding: 30px 0;
+            position: relative;
+            z-index: 1;
+            border-top: 1px solid #d3dbe3;
+            font-size: 16px;
+        }
+
+        #error>div {
+            background-color: #d05c5c;
+            color: #FFF;
+            border-radius: 2px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        @media (max-width: 1199px) {
+
+            body::after,
+            main::before,
+            main::after {
+                display: none;
+            }
+
+            body {
+                overflow: auto;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .hero {
+                margin: 20px auto;
+                flex-direction: column;
+            }
+
+            h1 {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            h1::after {
+                margin: 0 auto;
+            }
+
+            form {
+                padding: 30px;
+            }
+
+            form button {
+                position: static;
+                margin-top: 10px;
+            }
+
+            label {
+                font-size: 20px;
+            }
+
+            .input-holder {
+                padding-right: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <div class="hero">
+            <div>
+                <?xml version="1.0" encoding="UTF-8"?>
+                <svg width="212px" height="345px" viewBox="0 0 212 345" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" style="width:72px; height:auto">
+                    <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+                    <title>Slice 11</title>
+                    <desc>Created with Sketch.</desc>
+                    <defs></defs>
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="bulb" transform="translate(-51.000000, -27.000000)">
+                            <g id="Group-5" transform="translate(107.000000, 290.000000)">
+                                <path d="M24.7524752,43 L22.7722772,72 L24.7524752,43 Z" id="Triangle-3" fill="#656565">
+                                </path>
+                                <polygon id="Triangle-3" fill="#656565" points="0 62 25 41 50 82"></polygon>
+                                <polygon id="Triangle-3" fill="#787778" points="0 0 0 62 25 41"></polygon>
+                                <polygon id="Triangle-3" fill="#5C5C5C" points="75 41 50 82 100 62"></polygon>
+                                <polygon id="Triangle-3" fill="#787778" points="100 62 75 41 100 0"></polygon>
+                                <polygon id="Triangle-3" fill="#4A4A4A" points="0 0 100 0 50 82"></polygon>
+                            </g>
+                            <g id="Group" transform="translate(6.000000, 1.000000)">
+                                <polygon id="Triangle-3" fill="#FED12F" points="111 100 217 144 141 205"></polygon>
+                                <polygon id="Triangle-3" fill="#FED12F" points="191 26 251 88 217 144"></polygon>
+                                <polygon id="Triangle-3" fill="#FED12F" points="101 289 211 257 201 289"></polygon>
+                                <polygon id="Triangle-3" fill="#FED12F" points="91 257 141 205 101 289"></polygon>
+                                <polygon id="Triangle-3" fill="#FED12F" points="51 88 111 26 111 100"></polygon>
+                                <polygon id="Triangle-3" fill="#FFF3CB" points="141 205 211 257 217 144"></polygon>
+                                <polygon id="Triangle-3" fill="#FFF3CB"
+                                    transform="translate(91.982123, 202.376609) rotate(140.000000) translate(-91.982123, -202.376609) "
+                                    points="56.1185344 168.858891 118.731412 243.589257 127.845712 161.163961">
+                                </polygon>
+                                <polygon id="Triangle-3" fill="#FFDD63"
+                                    transform="translate(187.648863, 90.616899) rotate(-53.000000) translate(-187.648863, -90.616899) "
+                                    points="134.026748 35.0492865 241.270978 54.4058156 162.679178 146.184512">
+                                </polygon>
+                                <polygon id="Triangle-3" fill="#FFEDAC"
+                                    transform="translate(112.700659, 170.148822) rotate(-53.000000) translate(-112.700659, -170.148822) "
+                                    points="57.7008005 126.823779 167.700517 126.574001 101.898239 213.723643">
+                                </polygon>
+                                <polygon id="Triangle-3" fill="#FFDD63"
+                                    transform="translate(148.569878, 267.401001) rotate(-53.000000) translate(-148.569878, -267.401001) "
+                                    points="102.691884 242.40861 193.849867 223.801568 194.447872 311.000435"></polygon>
+                                <polygon id="Triangle-3" fill="#FFDD63"
+                                    transform="translate(214.000000, 200.500000) rotate(-53.000000) translate(-214.000000, -200.500000) "
+                                    points="167.071649 232.106642 260.928351 168.893358 249.86099 227.318639"></polygon>
+                                <polygon id="Triangle-3" fill="#FFDD63"
+                                    transform="translate(55.981655, 127.407987) rotate(-53.000000) translate(-55.981655, -127.407987) "
+                                    points="0.981796369 155.102831 84.4562375 99.713142 110.981513 154.853053">
+                                </polygon>
+                                <polygon id="Triangle-3" fill="#FEE382"
+                                    transform="translate(254.000000, 138.000000) rotate(-53.000000) translate(-254.000000, -138.000000) "
+                                    points="226.941031 112.061376 292.12633 105.513342 215.87367 170.486658"></polygon>
+                                <polygon id="Triangle-3" fill="#FEF1C0"
+                                    transform="translate(146.320889, 50.144248) rotate(160.000000) translate(-146.320889, -50.144248) "
+                                    points="96.0784387 57.5512633 196.563339 15.3756208 171.253848 84.9128748">
+                                </polygon>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <h1>Minds - Video Archiver</h1>
+        </div>
+        <form id="main-form">
+            <label for="url" style="display: block; margin-bottom: 15px;text-align:left">Link to post:</label>
+            <div class="input-holder">
+                <input type="text" id="url" name="url"
+                    placeholder="https://www.minds.com/newsfeed/XXXXXXXXXXXXXXXXXXX" />
+                <div id="error"></div>
+                <button>Submit</button>
+            </div>
+        </form>
+    </main>
+    <div class="container">
+        <p>
+            <a href="http://github.com/thomdin" class="github">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" style="width:30px;height:auto">
+                    <path
+                        d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+                </svg>
+                <strong>View on GitHub</strong>
+            </a>
+        </p>
+    </div>
+    <footer>
+        Developed by <a href="https://www.minds.com/thomdin/" rel="nofollow" target="_blank">@thomdin</a>
+    </footer>
+    <script>
+        const form = document.getElementById('main-form');
+        const error_holder = document.getElementById('error');
+        const url_field = document.getElementById('url');
+        const endpoint = '/api';
+
+        url_field.onfocus = function () {
+            error_holder.innerHTML = '';
+        }
+
+        form.onsubmit = function (e) {
+            e.preventDefault();
+
+            if (url_field.value.trim() === '') {
+                error_holder.innerHTML = '<div>Please enter a link</div>';
+                return;
+            }
+            if (url_field.value.toLowerCase().indexOf('newsfeed') < 0) {
+                error_holder.innerHTML = '<div>The link is not valid.</div>';
+                return;
+            }
+
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4) {
+                    if (this.status !== 200) {
+                        handleBeError(this.status)
+                        return;
+                    }
+
+                    window.location.assign(endpoint + "/?post_id=" + post_id + '&action=download');
+                }
+            };
+            const parts = url_field.value.split('/').filter(function (p) {
+                return (p.trim() !== '')
+            });
+            const post_id = parts[parts.indexOf('newsfeed') + 1];
+            xhttp.open("GET", endpoint + '/?post_id=' + post_id + '&action=validate');
+            xhttp.send();
+        }
+
+        function handleBeError(status_code) {
+            if (status_code === 403) {
+                error_holder.innerHTML = '<div>The video does not exist or the access is not authorized. Make sure the video is hosted on minds.com and is publicly available.</div>';
+            }
+            else {
+                error_holder.innerHTML = '<div>Download failed.</div>';
+            }
+        }
+    </script>
+</body>
+
+</html>
